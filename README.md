@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/chenzhen1988/LeetcodeDev.svg?branch=main)](https://travis-ci.org/github/chenzhen1988/LeetcodeDev)
 # 1、Linux环境下编译运行
 
 ## 1.1、编译所有的target
