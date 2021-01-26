@@ -1,0 +1,25 @@
+Import('env')
+import os
+
+supportLibs = [
+    'cstl.V2.3',
+    'gtest',
+    'libc_sec',
+    'panic',
+    'uthash',
+    'common',
+]
+
+src_files = []
+
+# Add libs.
+for lib in supportLibs:
+    src_files.append(SConscript(os.path.join('libs', lib, 'SConscript'), {'env': env}))
+
+# Add source code.
+src_files.append(SConscript(os.path.join('code', 'SConscript'), {'env': env}))
+
+# Add testcase.
+src_files.append(SConscript(os.path.join('testcase', 'SConscript'), {'env': env}))
+
+Return ('src_files')
