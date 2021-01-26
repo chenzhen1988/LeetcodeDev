@@ -1,0 +1,9 @@
+Import('env')
+import os
+
+env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'include')] )
+
+src_files = []
+src_files.append( Glob(os.path.join('.', 'src', '*.cpp')) )
+
+Return ('src_files')
