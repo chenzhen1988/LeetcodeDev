@@ -1,0 +1,11 @@
+language: c
+
+before_install:
+  - travis_retry sudo apt-get update -qq
+  
+install:
+  - travis_retry sudo apt-get install scons
+
+script:
+  - scons target=all -j24
+  - ./main
