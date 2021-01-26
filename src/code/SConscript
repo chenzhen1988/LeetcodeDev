@@ -1,0 +1,12 @@
+Import('env')
+import os
+
+env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'inc')] )
+
+src_files = []
+if env['BUILD_TARGET'] != 'all':
+    src_files.append( Glob(os.path.join('.', 'src', '%s.cpp' % env['BUILD_TARGET'])) )
+else:
+    src_files.append( Glob(os.path.join('.', 'src', '*.cpp')) )
+
+Return ('src_files')
