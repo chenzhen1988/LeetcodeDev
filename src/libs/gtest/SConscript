@@ -1,0 +1,5 @@
+Import('env')
+import os
+
+env.Append(CPPPATH=[os.path.join(Dir('.').srcnode().abspath, 'include')])
+env.Append(LIBS = ['gtest', 'gtest_main'])

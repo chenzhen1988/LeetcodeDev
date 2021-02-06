@@ -2,11 +2,8 @@ Import('env')
 import os
 
 supportLibs = [
-    'cstl.V2.3',
     'gtest',
-    'libc_sec',
     'panic',
-    'uthash',
     'common',
 ]
 

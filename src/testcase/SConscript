@@ -1,0 +1,7 @@
+Import('env')
+import os
+
+src_files = []
+src_files.append( Glob(os.path.join('.', '*.cpp')) )
+
+Return ('src_files')
