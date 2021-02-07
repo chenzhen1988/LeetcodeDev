@@ -2,6 +2,10 @@ Import('env')
 import os
 
 src_files = []
-src_files.append( Glob(os.path.join('.', '*.cpp')) )
+if env['BUILD_TARGET'] != 'all':
+    src_files.append( Glob(os.path.join('.', '%s_test.cpp' % env['BUILD_TARGET'])) )
+    src_files.append( Glob(os.path.join('.', 'main.cpp')) )
+else:
+    src_files.append( Glob(os.path.join('.', '*.cpp')) )
 
 Return ('src_files')
