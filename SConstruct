@@ -3,15 +3,15 @@ env['CC'] = 'gcc'
 env['CXX'] = 'gcc'
 env['LINK'] = 'g++'
 
-env['CCCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
-env['CXXCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
-env['LINKCOMSTR'] = '[INFO]: Linking $TARGET ...'
+#env['CCCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
+#env['CXXCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
+#env['LINKCOMSTR'] = '[INFO]: Linking $TARGET ...'
 
 env['BUILD_TARGET'] = ARGUMENTS.get('target', '')
 env['DEBUG_MODE'] = ARGUMENTS.get('dbg', 'n')
 
 CCFlags = [
-    
+    '-std=gnu++11'
 ]
 env.Append(CCFLAGS = [ CCFlags ])
 
