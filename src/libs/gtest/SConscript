@@ -1,5 +1,14 @@
 Import('env')
 import os
+import platform
 
-env.Append(CPPPATH=[os.path.join(Dir('.').srcnode().abspath, 'include')])
-env.Append(LIBS = ['gtest', 'gtest_main'])
+env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'include')] )
+if 'Windows' in platform.platform():
+    env.Append(LIBPATH = [os.path.join(Dir('.').srcnode().abspath, 'lib_windows')] )
+    env.Append(LIBS = ['gtest', 'gtest_main'])
+elif 'Linux' in platform.platform():
+    env.Append(LIBPATH = [os.path.join(Dir('.').srcnode().abspath, 'lib_linux')] )
+    env.Append(LIBS = ['gtest', 'gtest_main', 'pthread'])
+
+src_files = []
+Return ('src_files')
