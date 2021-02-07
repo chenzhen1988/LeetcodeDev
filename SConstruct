@@ -3,9 +3,9 @@ env['CC'] = 'g++'
 env['CXX'] = 'g++'
 env['LINK'] = 'g++'
 
-env['CCCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
-env['CXXCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
-env['LINKCOMSTR'] = '[INFO]: Linking $TARGET ...'
+#env['CCCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
+#env['CXXCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
+#env['LINKCOMSTR'] = '[INFO]: Linking $TARGET ...'
 
 env['BUILD_TARGET'] = ARGUMENTS.get('target', '')
 env['DEBUG_MODE'] = ARGUMENTS.get('dbg', 'n')
