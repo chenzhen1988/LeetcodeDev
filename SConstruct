@@ -1,6 +1,6 @@
 env = Environment(tools = ['mingw'])
-env['CC'] = 'gcc'
-env['CXX'] = 'gcc'
+env['CC'] = 'g++'
+env['CXX'] = 'g++'
 env['LINK'] = 'g++'
 
 env['CCCOMSTR'] = '[INFO]: Compiling $SOURCE ...'
