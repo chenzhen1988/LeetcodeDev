@@ -5,6 +5,7 @@ supportLibs = [
     'gtest',
     'panic',
     'common',
+    'libsec'
 ]
 
 src_files = []

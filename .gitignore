@@ -1,3 +1,6 @@
+# SCons
+.sconsign.dblite
+
 # Prerequisites
 *.d
 
