@@ -1,4 +1,4 @@
-language: c
+language: cpp
 
 before_install:
   - travis_retry sudo apt-get update -qq
@@ -8,4 +8,4 @@ install:
 
 script:
   - scons target=all -j24
-  - ./main
+  - ./main.exe
