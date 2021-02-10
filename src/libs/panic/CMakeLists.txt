@@ -3,6 +3,6 @@ FILE(GLOB_RECURSE
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
 )
 
-target_include_directories(${target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+TARGET_INCLUDE_DIRECTORIES(${target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-target_sources(${target} PUBLIC ${src_file_list})
+TARGET_SOURCES(${target} PUBLIC ${src_file_list})

@@ -1,9 +1,3 @@
-#FILE(GLOB_RECURSE
-#    lib_file_list
-#    "${CMAKE_CURRENT_SOURCE_DIR}/lib_linux/*.a"
-#)
+TARGET_INCLUDE_DIRECTORIES(${target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-target_include_directories(${target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
-target_link_libraries(${target} ${CMAKE_CURRENT_SOURCE_DIR}/lib_linux/libgtest_main.a ${CMAKE_CURRENT_SOURCE_DIR}/lib_linux/libgtest.a)
-target_link_libraries(${target} pthread)
+TARGET_LINK_LIBRARIES(${target} ${CMAKE_CURRENT_SOURCE_DIR}/lib_linux/libgtest_main.a ${CMAKE_CURRENT_SOURCE_DIR}/lib_linux/libgtest.a pthread)

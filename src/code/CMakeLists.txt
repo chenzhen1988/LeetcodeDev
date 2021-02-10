@@ -1,12 +1,12 @@
-if(${testcase} MATCHES "all")
+IF(${testcase} MATCHES "all")
     FILE(GLOB_RECURSE
         src_file_list
         "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
     )
-else()
-    set(src_file_list "${CMAKE_CURRENT_SOURCE_DIR}/src/${testcase}.cpp")
-endif()
+ELSE()
+	SET(src_file_list "${CMAKE_CURRENT_SOURCE_DIR}/src/${testcase}.cpp")
+ENDIF()
 
-target_include_directories(${target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc)
+TARGET_INCLUDE_DIRECTORIES(${target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc)
 
-target_sources(${target} PUBLIC ${src_file_list})
+TARGET_SOURCES(${target} PUBLIC ${src_file_list})
