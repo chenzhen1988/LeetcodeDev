@@ -1,0 +1,18 @@
+version: '1.0.{build}'
+
+environment:
+    matrix:
+          CC: g++
+
+clone_depth: 1
+
+init:
+    - git config --global core.autocrlf input
+
+image: Ubuntu
+
+build:
+    - mkdir build && cd build && cmake .. && make
+
+#test_script:
+#    - '%APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\tests.exe'
