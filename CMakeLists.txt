@@ -9,6 +9,7 @@ SET(support_libs
         "panic"
         "libsec"
         "gtest"
+	"libcstl"
 )
 SET(testcase ${T})
 
