@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/chenzhen1988/LeetcodeDev.svg?branch=main)](https://travis-ci.org/github/chenzhen1988/LeetcodeDev)
+[![Build Status](https://travis-ci.org/chenzhen1988/LeetcodeDev.svg?branch=main)](https://travis-ci.org/github/chenzhen1988/LeetcodeDev) ----【构建太慢，废弃】
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ovq8naak6atbjgv6/branch/main?svg=true)](https://ci.appveyor.com/project/chenzhen1988/leetcodedev/branch/main)
 # 1、Linux环境下编译运行
