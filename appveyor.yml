@@ -2,9 +2,10 @@
 environment:
     matrix:
         - CC: gcc
-          CFLAGS: -m32
-          CXXFLAGS: -m32
-          LDFLAGS: -m32
+
+image:
+  - Ubuntu
+  
 clone_depth: 1
 # Attempt to ensure we don't try to convert line endings to Win32 CRLF as this will cause build to fail
 init:
