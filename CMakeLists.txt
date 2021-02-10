@@ -1,22 +1,22 @@
-cmake_minimum_required(VERSION 2.8.12)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12)
 
-cmake_policy(SET CMP0079 NEW)
+CMAKE_POLICY(SET CMP0079 NEW)
 
 # Variables
-set(target "main.exe")
-set(support_libs
+SET(target "main.exe")
+SET(support_libs
         "common"
         "panic"
         "libsec"
         "gtest"
 )
-set(testcase ${T})
+SET(testcase ${T})
 
 # set the project name
-project(LeetcodeDev)
+PROJECT(LeetcodeDev)
 
 # add the executable
-add_executable(${target})
+ADD_EXECUTABLE(${target})
 
 # add the sub dirs.
-add_subdirectory(src)
+ADD_SUBDIRECTORY(src)

@@ -1,3 +1,3 @@
-add_subdirectory(code)
-add_subdirectory(libs)
-add_subdirectory(testcase)
+ADD_SUBDIRECTORY(code)
+ADD_SUBDIRECTORY(libs)
+ADD_SUBDIRECTORY(testcase)

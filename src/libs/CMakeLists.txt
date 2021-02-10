@@ -1,3 +1,3 @@
-foreach(lib IN LISTS support_libs)
-    add_subdirectory(${lib})
-endforeach()
+FOREACH(lib IN LISTS support_libs)
+    ADD_SUBDIRECTORY(${lib})
+ENDFOREACH()
