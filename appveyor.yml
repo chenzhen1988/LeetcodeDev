@@ -12,4 +12,4 @@ init:
 
 build_script:
     - 'echo building...'
-    - 'bash -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; mkdir build && cd build && cmake .. -G \"Unix Makefiles\" && make VERBOSE=1"'
+    - 'bash -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; mkdir build && cd build && cmake .. && make VERBOSE=1"'
