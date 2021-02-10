@@ -7,8 +7,8 @@ init:
 
 image: Ubuntu
 
-build:
-    - mkdir build && cd build && cmake .. && make
+#build:
+#    - mkdir build && cd build && cmake .. && make
 
 #test_script:
 #    - '%APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\tests.exe'
