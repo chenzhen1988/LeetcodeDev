@@ -4,11 +4,15 @@
 ## 1.1、编译所有的target
 ```shell
 ./scons target=all -j24
+或者
+mkdir build && cd build && cmake .. -DT=all && make 
 ```
 
 ## 1.2、编译指定的target
 ```shell
 ./scons target=xxx -j24
+或者
+mkdir build && cd build && cmake .. -DT=xxx && make
 ```
 
 ## 1.3、运行
