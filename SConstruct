@@ -1,3 +1,5 @@
+import subprocess
+
 env = Environment(tools = ['mingw'])
 env['CC'] = 'g++'
 env['CXX'] = 'g++'
@@ -14,6 +16,10 @@ CCFlags = [
     '-std=gnu++11'
 ]
 env.Append(CCFLAGS = [ CCFlags ])
+
+if env['BUILD_TARGET'] == 'doc':
+    subprocess.Popen('doxygen ./tools/doxygen/Doxyfile', shell=True)
+    Return()
 
 if env['DEBUG_MODE'] == 'y':
     print('--------------------------------------------------------')
