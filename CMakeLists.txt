@@ -16,6 +16,9 @@ SET(testcase ${T})
 # set the project name
 PROJECT(LeetcodeDev)
 
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage")
+
 IF (testcase MATCHES "doc")
     add_custom_target(doc ALL
         COMMAND doxygen ./../tools/doxygen/Doxyfile
