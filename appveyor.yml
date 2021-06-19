@@ -16,6 +16,6 @@ build_script:
     - 'bash -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; mkdir build && cd build && cmake .. -DT=all && make VERBOSE=1"'
 
 test_script:
-    # - 'bash -lc "./InitialCoverage.sh"'
+    - 'bash -lc "./InitialCoverage.sh"'
     - 'bash -lc "./build/main.exe"'
-    # - 'bash -lc "./ReportCoverage.sh"'
+    - 'bash -lc "./ReportCoverage.sh"'
