@@ -10,6 +10,7 @@ clone_depth: 1
 # Attempt to ensure we don't try to convert line endings to Win32 CRLF as this will cause build to fail
 init:
     - git config --global core.autocrlf input
+    - apt-get install lcov
 
 build_script:
     - 'echo building...'
