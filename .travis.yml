@@ -1,18 +1,28 @@
-os: linux
-language: python
-python: "3.7"
-dist: xenial
-compiler:
-  - gcc
+matrix:
+  include:
+    # works on Precise and Trusty
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+      env:
+        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+
+before_install:
+    - eval "${MATRIX_EVAL}"
+
+language: cpp
+
+before_install:
+  - travis_retry sudo apt-get update -qq
+  
 install:
-# Install conan
-  - pip install conan
-# Automatic detection of your arch, compiler, etc.
-  - conan user
+  - travis_retry sudo apt-get install lcov
+
 script:
-# Download dependencies and build project
-  - conan install .
-# Call your build system and run
   - mkdir build 
   - cd build 
   - cmake .. -DT=all 
