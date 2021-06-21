@@ -21,7 +21,10 @@ before_install:
   
 install:
   - travis_retry sudo apt-get install scons
+  - travis_retry sudo apt-get install lcov
 
 script:
   - scons target=all -j24
+  - ./InitialCoverage.sh
   - ./main.exe
+  - ./ReportCoverage.sh
