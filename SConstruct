@@ -12,9 +12,11 @@ env['DEBUG_MODE'] = ARGUMENTS.get('dbg', 'n')
 
 CCFlags = [
     '-std=gnu++11',
-    '-fprofile-arcs -ftest-coverage'
+    '-fprofile-arcs',
+    '-ftest-coverage'
 ]
 env.Append(CCFLAGS = [ CCFlags ])
+env.Append(LIBS = ['gcov'])
 
 if env['DEBUG_MODE'] == 'y':
     print('--------------------------------------------------------')
