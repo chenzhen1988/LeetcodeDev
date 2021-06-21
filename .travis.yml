@@ -25,6 +25,6 @@ install:
 
 script:
   - scons target=all -j24
-  - ./InitialCoverage.sh
+  # - ./InitialCoverage.sh
   - ./main.exe
-  - ./ReportCoverage.sh
+  # - ./ReportCoverage.sh
