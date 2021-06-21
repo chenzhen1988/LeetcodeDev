@@ -8,8 +8,6 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-7
-            - cmake-data
-            - cmake
       env:
         - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
 
@@ -22,14 +20,8 @@ before_install:
   - travis_retry sudo apt-get update -qq
   
 install:
-  - travis_retry sudo apt-get install lcov
+  - travis_retry sudo apt-get install scons
 
 script:
-  - mkdir build 
-  - cd build 
-  - cmake .. -DT=all 
-  - make -j24
-  - cd ..
-  - InitialCoverage.sh
-  - ./build/main.exe
-  - ReportCoverage.sh
+  - scons target=all -j24
+  - ./main.exe
