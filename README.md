@@ -1,4 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ovq8naak6atbjgv6/branch/main?svg=true)](https://ci.appveyor.com/project/chenzhen1988/leetcodedev/branch/main)
+[![Build Status](https://travis-ci.com/chenzhen1988/LeetcodeDev.svg?branch=main)](https://travis-ci.com/chenzhen1988/LeetcodeDev)
 # 1、Linux环境下编译运行
 
 ## 1.1、编译所有的target
