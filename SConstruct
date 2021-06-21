@@ -11,7 +11,6 @@ env['BUILD_TARGET'] = ARGUMENTS.get('target', '')
 env['DEBUG_MODE'] = ARGUMENTS.get('dbg', 'n')
 
 CCFlags = [
-    '-std=gnu++11',
     '-fprofile-arcs',
     '-ftest-coverage'
 ]
