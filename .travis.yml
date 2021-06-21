@@ -1,27 +1,23 @@
-matrix:
-  include:
-    # works on Precise and Trusty
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-7
-      env:
-        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
-
-before_install:
-    - eval "${MATRIX_EVAL}"
-
-language: cpp
-
-before_install:
-  - travis_retry sudo apt-get update -qq
-  
+os: linux
+language: python
+python: "3.7"
+dist: xenial
+compiler:
+  - gcc
 install:
-  - travis_retry sudo apt-get install scons
-
+# Install conan
+  - pip install conan
+# Automatic detection of your arch, compiler, etc.
+  - conan user
 script:
-  - scons target=all -j24
-  - ./main.exe
+# Download dependencies and build project
+  - conan install .
+# Call your build system and run
+  - mkdir build 
+  - cd build 
+  - cmake .. -DT=all 
+  - make -j24
+  - cd ..
+  - InitialCoverage.sh
+  - ./build/main.exe
+  - ReportCoverage.sh
